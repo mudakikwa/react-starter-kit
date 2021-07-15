@@ -1,0 +1,22 @@
+@import "variables";
+
+@mixin transition{
+  transition: all 0.3s ease-out;
+}
+@mixin background-img{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin grid($cols, $margin) {
+  -ms-flex: 0 0 (100%/($cols+$margin));
+  flex: 0 0 (100%/($cols+$margin));
+  max-width: (100%/($cols+$margin));
+  margin-right: ((100%/$cols)-(100%/($cols+$margin)));
+  margin-top: ((100%/$cols)-(100%/($cols+$margin)));
+
+  @include mq($xls) {
+    margin-top: 12%;
+  }
+}

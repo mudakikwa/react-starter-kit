@@ -1,0 +1,68 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "./components/sass/variables.scss";
+@import "./components/sass/mixins.scss";
+@import "./components/fonts/font.scss";
+// needs refactoring
+.btn-loading,
+.btn-error,
+.btn-success {
+  background-color: #7171ff;
+  height: (60px / $divider);
+  color: $white;
+  font-weight: 300;
+  font-size: (18px / $divider);
+  line-height: (30px / $divider);
+  text-align: left;
+  margin-bottom: (30px / $divider);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: (9px / $divider);
+  font-family: $open-sans-semi-bold;
+  font-weight: 500;
+
+  .text {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.btn-error {
+  background-color: #FF7171;
+}
+
+.btn-success {
+  background-color: #5DD97C;
+  color: #000;
+}
+
+body{
+  background-color: #000;
+  overflow-y: scroll;
+  // overflow-y: hidden;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+  &::-webkit-scrollbar {
+    width: (10px / $divider);
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: lighten($color: $gray-main-color, $amount: 1);
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: darken($color: #262926, $amount: 20);
+    border-radius: 100px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #262926;
+  }
+  a{
+    text-decoration: none;
+  }
+}
